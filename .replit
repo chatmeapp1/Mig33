@@ -67,12 +67,12 @@ waitForPort = 5000
 name = "Expo Go"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd mig33 && npx expo start --tunnel"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd mig33 && npx expo start --tunnel --clear"
 
 [nix]
 channel = "stable-25_05"
