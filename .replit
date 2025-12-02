@@ -72,7 +72,7 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd mig33 && npx expo start --tunnel --clear"
+args = "cd mig33 && npx expo start --tunnel --go --clear"
 
 [nix]
 channel = "stable-25_05"
