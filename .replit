@@ -13,4 +13,29 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd backend && npm start"
+args = "cd mig33/backend && npm install && npm start"
+
+[[workflows.workflow]]
+name = "Run Frontend"
+author = 50570381
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd mig33 && npm install && npm start"
+
+[[workflows.workflow]]
+name = "Run Full Stack"
+author = 50570381
+mode = "parallel"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd mig33/backend && npm install && npm start"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd mig33 && npm install && npm start"
+
+[nix]
+channel = "stable-25_05"
